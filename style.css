@@ -1,53 +1,69 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-header{
+
+/* header styles */
+body{
+    overflow-x: hidden;
+}
+header {
     background: #002E6D;
     color: white;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
-header img{
+
+header img {
     height: 21%;
     margin-left: 50px;
 }
-nav{
+
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     height: 100%;
+
 }
-nav li{
+
+nav li {
     text-align: center;
     cursor: pointer;
 }
-nav li:hover{
+
+nav li:hover {
     color: #8c8a8a;
 }
-.apply{
+
+.apply {
     background: #D00D2D;
-    height: 100%;
+    height: 63px;
     width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.apply a{
+
+.apply a {
     color: white;
 }
-.circle{
+
+.circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,4 +74,170 @@ nav li:hover{
     width: 18px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.circle:hover {
+    color: red;
+}
+
+/* drop-down styles */
+.drop-content{
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.drop-nav {
+    opacity: 0;
+    position: absolute;
+    top: 100%;      /* directly below menu item */
+    left: 0;
+    width: 100%;
+    /* background: aliceblue; */
+    padding: 50px 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+    pointer-events: none;
+}
+.drop-content:hover +  .drop-nav, .drop-nav:hover{
+    opacity: 1;
+    transition: opacity 0.5s;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* left content stays at top */
+    color: #8c8a8a;
+    gap: 60px;
+}
+.link-wrapper nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    flex: 1;              /* text takes remaining space */
+    max-width: 60%;       /* prevents over-expansion */
+    padding-left: 100px;
+
+}
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.link-wrapper ul {
+    width: 100%;
+}
+
+.link-wrapper li {
+    width: 100%;
+    text-align: left;
+    font-size: 17px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+    color: #8c8a8a;
+    text-transform: uppercase;
+}
+.link-wrapper p{
+    font-size: 14px;
+    text-transform: none;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.red-line {
+    width: 40%;
+    background: red;
+    height: 1.5px;
+}
+.right {
+    display: flex;
+    align-items: center;   /* 🔥 THIS fixes the image position */
+    height: 100%;
+}
+
+
+
+.chevron {
+    color: red;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    padding-top: 80%;
+    cursor: pointer;
+}
+
+
+
+.right-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    padding: 15px;
+    margin-right: 50px;
+}
+
+
+.right-wrapper span {
+    text-align: center;
+    color: rgb(67, 67, 231);
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.right img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.drop-footer{
+    width: 100%;
+    height: 10vh;
+    color: #002E6D;
+    border-bottom: 2px solid red;
+    font-weight: bolder;
+    font-size: 25px;
+    align-content: center;
+    padding-left: 50px;
+    background: rgb(246, 246, 246);
+    box-shadow: 0 -8px 10px rgba(211, 211, 211, 0.2);
+    position: absolute;
+    margin-top: 40px;
+
+}
+.drop-footer span{
+    cursor: pointer;
+}
+.menu-right {
+    display: flex;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu-img {
+    width: 420px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 10%;
 }
