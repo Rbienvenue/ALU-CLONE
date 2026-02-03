@@ -13,9 +13,10 @@ li {
 }
 
 /* header styles */
-body{
+body {
     overflow-x: hidden;
 }
+
 header {
     background: #002E6D;
     color: white;
@@ -81,7 +82,7 @@ nav li:hover {
 }
 
 /* drop-down styles */
-.drop-content{
+.drop-content {
     height: 64px;
     display: flex;
     align-items: center;
@@ -90,16 +91,21 @@ nav li:hover {
 .drop-nav {
     opacity: 0;
     position: absolute;
-    top: 100%;      /* directly below menu item */
+    top: 100%;
+    /* directly below menu item */
     left: 0;
     width: 100%;
+    z-index: 2;
+    background: white;
     /* background: aliceblue; */
     padding: 50px 0;
     transition: opacity 0.5s;
     visibility: hidden;
     pointer-events: none;
 }
-.drop-content:hover +  .drop-nav, .drop-nav:hover{
+
+.drop-content:hover+.drop-nav,
+.drop-nav:hover {
     opacity: 1;
     transition: opacity 0.5s;
     visibility: visible;
@@ -109,27 +115,33 @@ nav li:hover {
 .link-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* left content stays at top */
+    align-items: flex-start;
+    /* left content stays at top */
     color: #8c8a8a;
     gap: 60px;
 }
+
 .link-wrapper nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: auto;
-    flex: 1;              /* text takes remaining space */
-    max-width: 60%;       /* prevents over-expansion */
+    flex: 1;
+    /* text takes remaining space */
+    max-width: 60%;
+    /* prevents over-expansion */
     padding-left: 100px;
 
 }
+
 .nav-ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .link-wrapper ul {
     width: 100%;
 }
@@ -144,7 +156,8 @@ nav li:hover {
     color: #8c8a8a;
     text-transform: uppercase;
 }
-.link-wrapper p{
+
+.link-wrapper p {
     font-size: 14px;
     text-transform: none;
     line-height: 1.6;
@@ -156,9 +169,11 @@ nav li:hover {
     background: red;
     height: 1.5px;
 }
+
 .right {
     display: flex;
-    align-items: center;   /* 🔥 THIS fixes the image position */
+    align-items: center;
+    /* 🔥 THIS fixes the image position */
     height: 100%;
 }
 
@@ -201,7 +216,8 @@ nav li:hover {
     height: auto;
     display: block;
 }
-.drop-footer{
+
+.drop-footer {
     width: 100%;
     height: 10vh;
     color: #002E6D;
@@ -216,17 +232,21 @@ nav li:hover {
     margin-top: 40px;
 
 }
-.drop-footer span{
+
+.drop-footer span {
     cursor: pointer;
 }
+
 .menu-right {
     display: flex;
 }
-.flex{
+
+.flex {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 .menu-img {
     width: 420px;
     height: 260px;
@@ -240,4 +260,219 @@ nav li:hover {
     height: 100%;
     object-fit: cover;
     margin-top: 10%;
+}
+
+/* section 1 starts here */
+
+.section-1 {
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+.carousel-1 {
+    width: 100%;
+    height: 100%;
+    background: url('images/BCC-hero.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.fa-chevron-left {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+}
+
+span .fa-chevron-right {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+}
+
+.carousel-1 button {
+    background: #002e6d;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.carousel-content h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.carousel-content p {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.carousel-details {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.section-2 {
+    width: 100%;
+    height: 60vh;
+    background: url('images/pattern-banner.jpg');
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.p {
+    width: 90%;
+    padding-left: 30px;
+    font-size: 18px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 50%;
+    background: rgba(0, 46, 109, 0.7);
+    padding-left: 20px;
+    margin-left: 200px;
+}
+
+.section-2 .wrapper img {
+    width: 40%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.wrapper button {
+    background: #D00D2D;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.wrapper span {
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.wrapper p {
+    padding-left: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* section 3 starts here */
+
+.section-3 {
+    background: linear-gradient(180deg,
+            #333333 1%,
+            white 50%);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    width: 290px;
+    background: white;
+    border: 1px solid #e2e2e2;
+    height: 500px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transition: scale(1.001) 0.3s;
+    box-shadow: 10px 10px 10px 10px rgb(131, 131, 131);
+    /* scale: 1.001; */
+}
+
+.a {
+    background: url('images/workforce-survey-banner.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 540px;
+
+}
+
+.cards .fa-arrow-right {
+    font-size: 35px;
+    color: #D00D2D;
+    font-weight: normal;
+}
+
+.card-wrapper {
+    padding-left: 20px;
+    background: rgba(0, 46, 109, 0.4);
+}
+
+.b {
+    color: rgb(70, 70, 70);
+    padding: 20px;
+    position: relative;
+}
+
+.b h1 {
+    color: #002e6d;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.b ul {
+    margin-top: 30px;
+}
+
+.b li {
+    border-bottom: 1px solid red;
+    padding: 10px 0;
+}
+
+.b .last {
+    border: none;
+}
+
+.b button {
+    background: #D00D2D;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: left;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1%;
 }
